@@ -17,8 +17,11 @@ func _physics_process(delta):
 			jumped = true
 	if Input.is_action_pressed("RIGHT"):
 		velocity.x += speed_up
-	if Input.is_action_pressed("DOWN"):
-		animation_player.play("slide")
+	if Input.is_action_just_pressed("DOWN"):
+		animation_player.play("start_slide")
+	if Input.is_action_just_released("DOWN"):
+		animation_player.play("finish_slide")
+	
 	velocity.y += gravity*delta
 	velocity.y = move_and_slide(velocity, Vector2.UP).y
 	

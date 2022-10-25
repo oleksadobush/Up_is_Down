@@ -7,6 +7,7 @@ export var speed_up = 700
 
 var jumped = false
 var velocity = Vector2()
+onready var animation_player = get_node("AnimationPlayer")
 
 func _physics_process(delta):
 	velocity.x = speed
@@ -17,7 +18,7 @@ func _physics_process(delta):
 	if Input.is_action_pressed("RIGHT"):
 		velocity.x += speed_up
 	if Input.is_action_pressed("DOWN"):
-		pass
+		animation_player.play("slide")
 	velocity.y += gravity*delta
 	velocity.y = move_and_slide(velocity, Vector2.UP).y
 	

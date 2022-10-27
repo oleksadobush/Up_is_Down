@@ -4,11 +4,12 @@ awesome great unbelievable super wonderful game
 ## 1. Overview
 
 ### 1.1 Game Concept
-Simple minimalistic 2D runner. There are two types of obstacles: ones to jump on and ones to bend down. Small percent of all the obstacles have special power:
-when a player jumps on an obstacle, a passage opens and the player falls deeper in the ground.
-when a player bends down, a spring activates, so that player is thrown up.
-A player needs to go down at all costs, but for that he needs to jump up high a lot. 
-Hard… I know….
+Simple minimalistic 2D runner. 
+There are two types of obstacles: ones to jump on and ones to bend down. Small percent of all the obstacles have special power:
+- when a player jumps on an obstacle, a passage opens and the player falls deeper in the ground.
+- when a player bends down, a spring activates, so that player is thrown up.
+__A player needs to go down at all costs, but for that he needs to jump up high a lot.__
+
 
 ### 1.2 Genre
 Single-player, sided-view, runner, casual, adventure
@@ -62,7 +63,7 @@ The level can be saved at any time. The levels can not be replayed.
 
 ### 2.5 Easter Eggs
 May be later implemented.
-
+-----
 ## 3. Story, Setting and Characters
 ### 3.1 Story and Narrative
 May be later implemented.
@@ -72,7 +73,7 @@ The world is a cube.
 
 ### 3.3 Characters
 A player, abstract enemies.
-
+----
 ## 4. Levels
 One level - one “four-sided” path around the cube.
 There are connections between all the levels:

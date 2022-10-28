@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/medievalTile_156.png-f41515aa8f319c87780000646b48440e.stex"
+path="res://.import/WhiteTile.png-55dd9c8ac6be663438bfa014a78df2df.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Tilemap/medievalTile_156.png"
-dest_files=[ "res://.import/medievalTile_156.png-f41515aa8f319c87780000646b48440e.stex" ]
+source_file="res://Assets/Art/Tilemap/WhiteTile.png"
+dest_files=[ "res://.import/WhiteTile.png-55dd9c8ac6be663438bfa014a78df2df.stex" ]
 
 [params]
 

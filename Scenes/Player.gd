@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 export var speed = 600
 export var jumpforce = 800
+export var springforce = 3500
 export var gravity = 2000
 export var speed_up = 600
 
@@ -35,3 +36,5 @@ func _physics_process(delta):
 	else:
 		jumped = true
 	
+func spring_jump():
+	velocity.y -= lerp(velocity.y, velocity.y + springforce, 0.3)

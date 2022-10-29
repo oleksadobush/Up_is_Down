@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 export var speed = 600
 export var jumpforce = 800
-export var springforce = 3500
+export var springforce = 6000
 export var gravity = 2000
 export var speed_up = 600
 

@@ -6,6 +6,8 @@ export var springforce = 6000
 export var gravity = 2000
 export var speed_up = 600
 
+onready var ray = get_node("EdgeRay")
+
 var jumped = false
 var sliding = false
 var velocity = Vector2()
@@ -15,6 +17,8 @@ func _physics_process(delta):
 	velocity.x = speed
 	if Input.is_action_just_pressed("UP"):
 		if not jumped:
+			if ray.is_colliding():
+				print(ray.position)
 			velocity.y -= jumpforce
 			jumped = true
 

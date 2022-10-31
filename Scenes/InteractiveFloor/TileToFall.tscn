@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Assets/Art/FallingTiles/moving_tile2.png" type="Texture" id=1]
-[ext_resource path="res://Scenes/InteractiveFloor/MovingTile.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/InteractiveFloor/TileToFall.gd" type="Script" id=2]
 [ext_resource path="res://Assets/Art/FallingTiles/moving_tile4.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Art/FallingTiles/moving_tile3.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Art/FallingTiles/moving_tile.png" type="Texture" id=5]

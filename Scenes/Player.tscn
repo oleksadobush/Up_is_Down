@@ -31,7 +31,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 0.353553, 0.267943 ),
 "update": 0,
-"values": [ Vector2( 1, 0.5 ), Vector2( 1, 1 ) ]
+"values": [ Vector2( 1, 0.6 ), Vector2( 1, 1 ) ]
 }
 
 [sub_resource type="Animation" id=2]
@@ -47,7 +47,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 0.267943, 0.353553 ),
 "update": 0,
-"values": [ Vector2( 1, 1 ), Vector2( 1, 0.5 ) ]
+"values": [ Vector2( 1, 1 ), Vector2( 1, 0.6 ) ]
 }
 
 [sub_resource type="AnimationNodeStateMachine" id=4]
@@ -55,7 +55,7 @@ tracks/0/keys = {
 [sub_resource type="AnimationNodeStateMachinePlayback" id=5]
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 25.5, 26 )
+extents = Vector2( 25.5, 25 )
 
 [node name="Player" type="KinematicBody2D"]
 z_index = 10
@@ -82,18 +82,30 @@ anim_player = NodePath("../AnimationPlayer")
 parameters/playback = SubResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0.5, 0 )
+position = Vector2( 0.5, 1 )
 shape = SubResource( 6 )
 
 [node name="EdgeRayFall" type="RayCast2D" parent="."]
 position = Vector2( -25, -2 )
+scale = Vector2( 0.4, 0.4 )
 enabled = true
 cast_to = Vector2( 500, -250 )
 
 [node name="EdgeRayJump" type="RayCast2D" parent="."]
+scale = Vector2( 0.2, 0.2 )
 enabled = true
 cast_to = Vector2( 500, -450 )
 
 [node name="WallRay" type="RayCast2D" parent="."]
 enabled = true
 cast_to = Vector2( 27, 0 )
+
+[node name="CeillingRay" type="RayCast2D" parent="."]
+scale = Vector2( 5, 1.1 )
+enabled = true
+cast_to = Vector2( 0, -27 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

@@ -9,6 +9,10 @@ export var speed_up = 600
 onready var ray_fall = get_node("EdgeRayFall")
 onready var ray_jump = get_node("EdgeRayJump")
 onready var ray_wall = get_node("WallRay")
+onready var ray_ceil = get_node("CeillingRay")
+
+onready var animation_player = get_node("AnimationPlayer")
+onready var time = get_node("Timer")
 
 var jumped = false
 var sliding = false
@@ -31,7 +35,12 @@ func _physics_process(delta):
 			velocity.x += speed_up
 
 	if Input.is_action_pressed("DOWN"):
-		pass
+		if not sliding:
+			animation_player.play("start_slide")
+			sliding = true
+	if sliding and not ray_ceil.is_colliding() and not ray_fall.is_colliding():
+		animation_player.play("finish_slide")
+		sliding = false
 	
 	velocity.y += gravity*delta
 	velocity.y = move_and_slide(velocity, Vector2.UP).y

@@ -85,7 +85,15 @@ parameters/playback = SubResource( 5 )
 position = Vector2( 0.5, 0 )
 shape = SubResource( 6 )
 
-[node name="EdgeRay" type="RayCast2D" parent="."]
-scale = Vector2( 5, 5 )
+[node name="EdgeRayFall" type="RayCast2D" parent="."]
+position = Vector2( -25, -2 )
 enabled = true
-cast_to = Vector2( 50, -60 )
+cast_to = Vector2( 500, -250 )
+
+[node name="EdgeRayJump" type="RayCast2D" parent="."]
+enabled = true
+cast_to = Vector2( 500, -450 )
+
+[node name="WallRay" type="RayCast2D" parent="."]
+enabled = true
+cast_to = Vector2( 27, 0 )

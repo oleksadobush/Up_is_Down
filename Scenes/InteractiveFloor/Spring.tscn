@@ -4,19 +4,19 @@
 [ext_resource path="res://Scenes/InteractiveFloor/Spring.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 35.5, 34.5 )
+extents = Vector2( 64, 64 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 21.3931, 21.382 )
+extents = Vector2( 29.7644, 42.7641 )
 
 [node name="Spring" type="StaticBody2D"]
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 2, 2 )
 texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0.5, -0.5 )
 shape = SubResource( 1 )
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -24,7 +24,7 @@ collision_layer = 0
 collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 4.76837e-07, -4.5 )
+position = Vector2( 1.43051e-06, -9 )
 scale = Vector2( 1.07511, -1.70704 )
 shape = SubResource( 2 )
 

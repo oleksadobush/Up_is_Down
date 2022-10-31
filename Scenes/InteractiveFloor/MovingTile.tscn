@@ -47,14 +47,14 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.2 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 1 ), ExtResource( 4 ), ExtResource( 3 ) ]
 }
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 21, 44 )
+extents = Vector2( 21, 75 )
 
 [node name="MovingTile" type="Area2D"]
 collision_layer = 0
@@ -62,6 +62,7 @@ collision_mask = 8
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 2, 2 )
 texture = ExtResource( 5 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite"]
@@ -70,7 +71,8 @@ anims/default = SubResource( 4 )
 anims/falling = SubResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -1, -12 )
+position = Vector2( -1, -74 )
+scale = Vector2( 2, 2 )
 shape = SubResource( 3 )
 
 [connection signal="body_entered" from="." to="." method="_on_MovingTile_body_entered"]

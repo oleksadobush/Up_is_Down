@@ -9,7 +9,8 @@ export var speed_up = 600
 onready var ray_fall = get_node("EdgeRayFall")
 onready var ray_jump = get_node("EdgeRayJump")
 onready var ray_wall = get_node("WallRay")
-onready var ray_ceil = get_node("CeillingRay")
+onready var ray_ceil1 = get_node("CeillingRay")
+onready var ray_ceil2 = get_node("CeillingRay2")
 
 onready var animation_player = get_node("AnimationPlayer")
 
@@ -37,7 +38,8 @@ func _physics_process(delta):
 		if not sliding:
 			animation_player.play("start_slide")
 			sliding = true
-	if sliding and not ray_ceil.is_colliding() and not ray_fall.is_colliding():
+	if sliding and not ray_ceil1.is_colliding() and not \
+	ray_ceil2.is_colliding() and not ray_fall.is_colliding():
 		animation_player.play("finish_slide")
 		sliding = false
 	

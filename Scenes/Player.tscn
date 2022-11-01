@@ -68,6 +68,7 @@ scale = Vector2( 0.84375, 0.84375 )
 texture = ExtResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
+visible = false
 current = true
 zoom = Vector2( 1.2, 1.2 )
 
@@ -82,25 +83,34 @@ anim_player = NodePath("../AnimationPlayer")
 parameters/playback = SubResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2( 0.5, 1 )
 shape = SubResource( 6 )
 
 [node name="EdgeRayFall" type="RayCast2D" parent="."]
+visible = false
 position = Vector2( -25, -2 )
 scale = Vector2( 0.4, 0.4 )
 enabled = true
 cast_to = Vector2( 500, -250 )
 
 [node name="EdgeRayJump" type="RayCast2D" parent="."]
+visible = false
 scale = Vector2( 0.2, 0.2 )
 enabled = true
 cast_to = Vector2( 500, -450 )
 
 [node name="WallRay" type="RayCast2D" parent="."]
+visible = false
 enabled = true
 cast_to = Vector2( 27, 0 )
 
 [node name="CeillingRay" type="RayCast2D" parent="."]
-scale = Vector2( 5, 1.1 )
+position = Vector2( -28, 26 )
 enabled = true
-cast_to = Vector2( 0, -27 )
+cast_to = Vector2( 0, -54 )
+
+[node name="CeillingRay2" type="RayCast2D" parent="."]
+position = Vector2( 28, 26 )
+enabled = true
+cast_to = Vector2( 0, -54 )

@@ -109,8 +109,3 @@ cast_to = Vector2( 27, 0 )
 position = Vector2( -28, 26 )
 enabled = true
 cast_to = Vector2( 0, -54 )
-
-[node name="CeillingRay2" type="RayCast2D" parent="."]
-position = Vector2( 28, 26 )
-enabled = true
-cast_to = Vector2( 0, -54 )

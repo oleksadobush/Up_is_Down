@@ -8,3 +8,7 @@ func _ready():
 func _on_MovingTile_body_entered(body):
 	$Sprite/AnimationPlayer.current_animation = "falling"
 	body.gravity += falling_speed
+
+
+func _on_MovingTile_body_exited(body):
+	body.gravity -= falling_speed

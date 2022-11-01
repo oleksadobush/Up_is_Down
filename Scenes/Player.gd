@@ -12,7 +12,6 @@ onready var ray_wall = get_node("WallRay")
 onready var ray_ceil = get_node("CeillingRay")
 
 onready var animation_player = get_node("AnimationPlayer")
-onready var time = get_node("Timer")
 
 var jumped = false
 var sliding = false

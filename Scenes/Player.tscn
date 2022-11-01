@@ -104,8 +104,3 @@ cast_to = Vector2( 27, 0 )
 scale = Vector2( 5, 1.1 )
 enabled = true
 cast_to = Vector2( 0, -27 )
-
-[node name="Timer" type="Timer" parent="."]
-wait_time = 0.1
-
-[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

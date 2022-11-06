@@ -18,6 +18,5 @@ tile_data = PoolIntArray( -1507265, 1, 0, -1507264, 1, 0, -1507263, 1, 0, -15072
 [node name="Spring" parent="." instance=ExtResource( 2 )]
 position = Vector2( 2177, 91 )
 
-[node name="MovingTile10" parent="." instance=ExtResource( 3 )]
-position = Vector2( 4543, -614 )
-scale = Vector2( 1, 4 )
+[node name="TileToFall" parent="." instance=ExtResource( 3 )]
+position = Vector2( 4542, -614 )

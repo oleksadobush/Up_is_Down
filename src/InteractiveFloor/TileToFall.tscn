@@ -1,11 +1,11 @@
 [gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://src/InteractiveFloor/TileToFall.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Art/FallingTiles/moving_tile.png" type="Texture" id=2]
-[ext_resource path="res://Assets/Art/FallingTiles/moving_tile2.png" type="Texture" id=3]
-[ext_resource path="res://Assets/Art/FallingTiles/moving_tile1.png" type="Texture" id=4]
-[ext_resource path="res://Assets/Art/FallingTiles/moving_tile4.png" type="Texture" id=5]
-[ext_resource path="res://Assets/Art/FallingTiles/moving_tile3.png" type="Texture" id=6]
+[ext_resource path="res://art/FallingTiles/moving_tile.png" type="Texture" id=2]
+[ext_resource path="res://art/FallingTiles/moving_tile2.png" type="Texture" id=3]
+[ext_resource path="res://art/FallingTiles/moving_tile1.png" type="Texture" id=4]
+[ext_resource path="res://art/FallingTiles/moving_tile4.png" type="Texture" id=5]
+[ext_resource path="res://art/FallingTiles/moving_tile3.png" type="Texture" id=6]
 
 [sub_resource type="Animation" id=1]
 length = 0.001

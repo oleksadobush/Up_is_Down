@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/moving_tile4.png-d539fa3ce9ec642477ffaa197d97476a.stex"
+path="res://.import/moving_tile.png-7acb5f506b012a1f6af803049b40d1d2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/FallingTiles/moving_tile4.png"
-dest_files=[ "res://.import/moving_tile4.png-d539fa3ce9ec642477ffaa197d97476a.stex" ]
+source_file="res://art/FallingTiles/moving_tile.png"
+dest_files=[ "res://.import/moving_tile.png-7acb5f506b012a1f6af803049b40d1d2.stex" ]
 
 [params]
 

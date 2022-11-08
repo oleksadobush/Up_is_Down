@@ -2,15 +2,16 @@ extends KinematicBody2D
 
 var SPEED: int = 600
 var SPEED_UP: int = 600
-var JUMPFORCE: int = 800
-var SPRINGFORCE: int = 6000
+var JUMP_FORCE: int = 775
+var SPRING_FORCE: int = 6000
+var NEAR_WALL_SPEED: int = 150
+var LERP_WEIGHT: float = 0.3
 
 var gravity: int = 2000
 
 var _jumped: bool = false
 var _sliding: bool = false
 var _velocity: Vector2 = Vector2()
-var lerp_weight: float = 0.3
 
 onready var EdgeRayFall = get_node("EdgeRayFall")
 onready var EdgeRayJump = get_node("EdgeRayJump")
@@ -20,35 +21,35 @@ onready var AnimPlayer = get_node("AnimationPlayer")
 
 
 func _physics_process(delta):
-	velocity.x = speed
-	if not jumped and Input.is_action_just_pressed("UP"):
-		velocity.y -= jumpforce
+	_velocity.x = SPEED
+	if not _jumped and Input.is_action_just_pressed("UP"):
+		_velocity.y -= JUMP_FORCE
 		if not WallRay.is_colliding():
 			if EdgeRayFall.is_colliding():
-				velocity.y += 200
+				_velocity.y += NEAR_WALL_SPEED
 			elif EdgeRayJump.is_colliding():
-				velocity.y -= 200
-		jumped = true
+				_velocity.y -= NEAR_WALL_SPEED
+		_jumped = true
 
-	if not jumped and Input.is_action_pressed("RIGHT"):
-		velocity.x += speed_up
+	if not _jumped and Input.is_action_pressed("RIGHT"):
+		_velocity.x += SPEED_UP
 
-	if not sliding and Input.is_action_pressed("DOWN"):
+	if not _sliding and Input.is_action_pressed("DOWN"):
 		AnimPlayer.play("start_slide")
-		sliding = true
-	if sliding and not CeillingRay.is_colliding() and \
+		_sliding = true
+	if _sliding and not CeillingRay.is_colliding() and \
 	(not EdgeRayFall.is_colliding() or WallRay.is_colliding()):
 		AnimPlayer.play("finish_slide")
-		sliding = false
+		_sliding = false
 
 	if is_on_floor():
-		jumped = false
+		_jumped = false
 	else:
-		jumped = true
+		_jumped = true
 
-	velocity.y += gravity * delta
-	velocity.y = move_and_slide(velocity, Vector2.UP).y
+	_velocity.y += gravity * delta
+	_velocity.y = move_and_slide(_velocity, Vector2.UP).y
 
 
 func spring_jump():
-	velocity.y -= lerp(velocity.y, velocity.y + springforce, lerp_weight)
+	_velocity.y -= lerp(_velocity.y, _velocity.y + SPRING_FORCE, LERP_WEIGHT)

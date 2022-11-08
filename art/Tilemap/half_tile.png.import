@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/GrayTile.png-5d654dabf8426efecefb8f95bad30bbe.stex"
+path="res://.import/half_tile.png-a26a22c993c4fcf76b0ce6a16cb4f6ee.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/Player/GrayTile.png"
-dest_files=[ "res://.import/GrayTile.png-5d654dabf8426efecefb8f95bad30bbe.stex" ]
+source_file="res://art/Tilemap/half_tile.png"
+dest_files=[ "res://.import/half_tile.png-a26a22c993c4fcf76b0ce6a16cb4f6ee.stex" ]
 
 [params]
 

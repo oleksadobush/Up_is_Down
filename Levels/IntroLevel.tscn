@@ -19,4 +19,4 @@ tile_data = PoolIntArray( -1507265, 1, 0, -1507264, 1, 0, -1507263, 1, 0, -15072
 position = Vector2( 2177, 91 )
 
 [node name="TileToFall" parent="." instance=ExtResource( 3 )]
-position = Vector2( 4542, -614 )
+position = Vector2( 4541, -614 )

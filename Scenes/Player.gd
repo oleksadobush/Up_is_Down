@@ -1,15 +1,15 @@
 extends KinematicBody2D
 
+var speed: int = 600
+var speed_up: int = 600
+var jumpforce: int = 800
+var springforce: int = 6000
+var gravity: int = 2000
+
 var jumped: bool = false
 var sliding: bool = false
 var velocity: Vector2 = Vector2()
 var lerp_weight: float = 0.3
-
-export var speed: int = 600
-export var speed_up: int = 600
-export var jumpforce: int = 800
-export var springforce: int = 6000
-export var gravity: int = 2000
 
 onready var EdgeRayFall = get_node("EdgeRayFall")
 onready var EdgeRayJump = get_node("EdgeRayJump")

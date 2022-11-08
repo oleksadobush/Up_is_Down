@@ -86,12 +86,6 @@ visible = false
 position = Vector2( 0.5, 1 )
 shape = SubResource( 6 )
 
-[node name="EdgeRayFall" type="RayCast2D" parent="."]
-position = Vector2( -25, -2 )
-scale = Vector2( 0.4, 0.4 )
-enabled = true
-cast_to = Vector2( 500, -250 )
-
 [node name="EdgeRayJump" type="RayCast2D" parent="."]
 scale = Vector2( 0.2, 0.2 )
 enabled = true

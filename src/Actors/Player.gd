@@ -4,7 +4,7 @@ var SPEED: int = 600
 var SPEED_UP: int = 600
 var JUMP_FORCE: int = 775
 var SPRING_FORCE: int = 6000
-var NEAR_WALL_SPEED: int = 150
+var NEAR_WALL_SPEED: int = 10
 var LERP_WEIGHT: float = 0.3
 
 var gravity: int = 2000
@@ -13,7 +13,6 @@ var _jumped: bool = false
 var _sliding: bool = false
 var _velocity: Vector2 = Vector2()
 
-onready var EdgeRayFall = get_node("EdgeRayFall")
 onready var EdgeRayJump = get_node("EdgeRayJump")
 onready var WallRay = get_node("WallRay")
 onready var CeillingRay = get_node("CeillingRay")
@@ -25,9 +24,7 @@ func _physics_process(delta):
 	if not _jumped and Input.is_action_just_pressed("UP"):
 		_velocity.y -= JUMP_FORCE
 		if not WallRay.is_colliding():
-			if EdgeRayFall.is_colliding():
-				_velocity.y += NEAR_WALL_SPEED
-			elif EdgeRayJump.is_colliding():
+			if EdgeRayJump.is_colliding():
 				_velocity.y -= NEAR_WALL_SPEED
 		_jumped = true
 
@@ -38,7 +35,7 @@ func _physics_process(delta):
 		AnimPlayer.play("start_slide")
 		_sliding = true
 	if _sliding and not CeillingRay.is_colliding() and \
-	(not EdgeRayFall.is_colliding() or WallRay.is_colliding()):
+	(not EdgeRayJump.is_colliding() or WallRay.is_colliding()):
 		AnimPlayer.play("finish_slide")
 		_sliding = false
 

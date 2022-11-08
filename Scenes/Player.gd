@@ -29,9 +29,8 @@ func _physics_process(delta):
 				velocity.y -= 200
 		jumped = true
 
-	if Input.is_action_pressed("RIGHT"):
-		if not jumped:
-			velocity.x += speed_up
+	if not jumped and Input.is_action_pressed("RIGHT"):
+		velocity.x += speed_up
 
 	if not sliding and Input.is_action_pressed("DOWN"):
 		AnimPlayer.play("start_slide")

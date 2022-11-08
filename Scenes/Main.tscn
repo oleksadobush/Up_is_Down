@@ -6,3 +6,4 @@
 
 [node name="IntroLevel" parent="." instance=ExtResource( 1 )]
 position = Vector2( 0, 32 )
+script = null

@@ -12,7 +12,7 @@ config_version=4
 
 config/name="Up Is Down"
 run/main_scene="res://Scenes/Main.tscn"
-config/icon="res://icon.png"
+config/icon="res://Assets/Art/Player/GrayTile.png"
 
 [input]
 

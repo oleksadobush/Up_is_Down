@@ -35,7 +35,8 @@ func _physics_process(delta):
 	if not sliding and Input.is_action_pressed("DOWN"):
 		AnimPlayer.play("start_slide")
 		sliding = true
-	if sliding and not CeillingRay.is_colliding() and not EdgeRayFall.is_colliding():
+	if sliding and not CeillingRay.is_colliding() and \
+	(not EdgeRayFall.is_colliding() or WallRay.is_colliding()):
 		AnimPlayer.play("finish_slide")
 		sliding = false
 

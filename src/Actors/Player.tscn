@@ -87,9 +87,8 @@ position = Vector2( 0.5, 1 )
 shape = SubResource( 6 )
 
 [node name="EdgeRayJump" type="RayCast2D" parent="."]
-scale = Vector2( 0.2, 0.2 )
 enabled = true
-cast_to = Vector2( 500, -450 )
+cast_to = Vector2( 240, -120 )
 
 [node name="WallRay" type="RayCast2D" parent="."]
 enabled = true

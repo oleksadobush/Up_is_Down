@@ -31,7 +31,7 @@ func _physics_process(delta):
 	if not _jumped and Input.is_action_pressed("RIGHT"):
 		_velocity.x += SPEED_UP
 
-	if not _sliding and Input.is_action_pressed("DOWN"):
+	if not _sliding and not _jumped and Input.is_action_pressed("DOWN"):
 		AnimPlayer.play("start_slide")
 		_sliding = true
 	if _sliding and not CeillingRay.is_colliding() and \

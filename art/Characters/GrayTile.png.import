@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/GrayTile.png-c41514d399d79d00b977fdbba873c790.stex"
+path="res://.import/GrayTile.png-e37a2d0a49044cfcd05f255b4a6ead0b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Player/GrayTile.png"
-dest_files=[ "res://.import/GrayTile.png-c41514d399d79d00b977fdbba873c790.stex" ]
+source_file="res://art/Characters/GrayTile.png"
+dest_files=[ "res://.import/GrayTile.png-e37a2d0a49044cfcd05f255b4a6ead0b.stex" ]
 
 [params]
 

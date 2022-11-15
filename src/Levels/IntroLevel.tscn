@@ -5,7 +5,7 @@
 [ext_resource path="res://src/InteractiveFloor/ElevatorTile.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/Levels/IntroLevel.gd" type="Script" id=5]
-[ext_resource path="res://src/Levels/CustomCamera.gd" type="Script" id=6]
+[ext_resource path="res://src/Actors/CustomCamera.tscn" type="PackedScene" id=6]
 
 [node name="IntroLevel" type="Node2D"]
 script = ExtResource( 5 )
@@ -22,8 +22,5 @@ position = Vector2( 2177, 91 )
 [node name="ElevatorTile" parent="." instance=ExtResource( 3 )]
 position = Vector2( 4541, -614 )
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 300, 0 )
+[node name="Camera" parent="." instance=ExtResource( 6 )]
 current = true
-zoom = Vector2( 1.5, 1.5 )
-script = ExtResource( 6 )

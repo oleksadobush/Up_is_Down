@@ -3,7 +3,8 @@
 [ext_resource path="res://src/Levels/IntroLevel.tscn" type="PackedScene" id=1]
 
 [node name="Main" type="Node2D"]
+position = Vector2( 199, -108 )
 
 [node name="IntroLevel" parent="." instance=ExtResource( 1 )]
-position = Vector2( 0, 32 )
+position = Vector2( 3028, 816 )
 script = null

@@ -18,7 +18,7 @@ var jumped: bool = false
 var velocity: Vector2 = Vector2()
 
 func _physics_process(delta):
-	if Player:
+	if is_instance_valid(Player):
 		velocity.x = ENEMY_SPEED
 		var direction = (Player.position - position).normalized()
 		
@@ -31,8 +31,12 @@ func _physics_process(delta):
 		if not sliding and not jumped and WallRay.is_colliding():
 			velocity.y -= JUMP_FORCE
 			jumped = true
-		
 		velocity.y = move_and_slide(direction * ENEMY_SPEED + Vector2.DOWN * GRAVITY * delta).y
+	elif sliding and not CeillingRay.is_colliding():
+		AnimPlayer.play("finish_slide")
+		sliding = false
+		
+		
 
 func spring_jump():
 	velocity.y -= lerp(velocity.y, velocity.y + SPRING_FORCE, LERP_WEIGHT)

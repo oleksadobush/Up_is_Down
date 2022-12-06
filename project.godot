@@ -14,6 +14,11 @@ config/name="Up Is Down"
 run/main_scene="res://src/Main.tscn"
 config/icon="res://art/Characters/GrayTile.png"
 
+[display]
+
+window/stretch/mode="viewport"
+window/stretch/aspect="keep"
+
 [input]
 
 UP={

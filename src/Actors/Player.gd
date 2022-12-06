@@ -49,4 +49,5 @@ func _physics_process(delta):
 
 
 func spring_jump():
+	get_tree().create_tween()
 	_velocity.y -= lerp(_velocity.y, _velocity.y + SPRING_FORCE, LERP_WEIGHT)

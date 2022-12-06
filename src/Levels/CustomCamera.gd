@@ -14,9 +14,10 @@ func _ready():
 
 
 func _physics_process(delta):
-	next_position.x = player.get_position().x + 300
-	if player.get_position().y >= self.get_position().y + DIFFERENCE:
-		next_position.y += SHIFT
-	elif player.get_position().y <= self.get_position().y - DIFFERENCE:
-		next_position.y -= SHIFT
-	self.set_position(next_position)
+	if is_instance_valid(player):
+		next_position.x = player.get_position().x + 300
+		if player.get_position().y >= self.get_position().y + DIFFERENCE:
+			next_position.y += SHIFT
+		elif player.get_position().y <= self.get_position().y - DIFFERENCE:
+			next_position.y -= SHIFT
+		self.set_position(next_position)

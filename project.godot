@@ -12,7 +12,11 @@ config_version=4
 
 config/name="Up Is Down"
 run/main_scene="res://src/Main.tscn"
-config/icon="res://art/Player/GrayTile.png"
+config/icon="res://art/Characters/GrayTile.png"
+
+[display]
+
+window/stretch/aspect="keep"
 
 [input]
 
@@ -34,6 +38,12 @@ DOWN={
 , Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":83,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
  ]
 }
+
+[layer_names]
+
+2d_physics/layer_3="Enemies"
+2d_physics/layer_4="Player"
+2d_physics/layer_5="Walls"
 
 [physics]
 

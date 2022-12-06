@@ -1,11 +1,11 @@
 extends KinematicBody2D
 
-var SPEED: int = 600
-var SPEED_UP: int = 600
-var JUMP_FORCE: int = 775
-var SPRING_FORCE: int = 6000
-var NEAR_WALL_SPEED: int = 90
-var LERP_WEIGHT: float = 0.3
+const SPEED: int = 600
+const SPEED_UP: int = 600
+const JUMP_FORCE: int = 775
+const SPRING_FORCE: int = 6000
+const NEAR_WALL_SPEED: int = 90
+const LERP_WEIGHT: float = 0.3
 
 var gravity: int = 2000
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://src/Actors/Player.gd" type="Script" id=1]
-[ext_resource path="res://art/Player/GrayTile.png" type="Texture" id=2]
+[ext_resource path="res://art/Characters/GrayTile.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 25.5, 25.5 )
@@ -227,6 +227,7 @@ anim_player = NodePath("../AnimationPlayer")
 parameters/playback = SubResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2( 0, 0.5 )
 shape = SubResource( 6 )
 

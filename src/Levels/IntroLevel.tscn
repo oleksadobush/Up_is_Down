@@ -1,14 +1,18 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://src/TileMap.tscn" type="PackedScene" id=1]
-[ext_resource path="res://src/InteractiveFloor/Spring.tscn" type="PackedScene" id=2]
-[ext_resource path="res://src/InteractiveFloor/ElevatorTile.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/TransitionObjects/Spring.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/TransitionObjects/ElevatorTile.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/Levels/IntroLevel.gd" type="Script" id=5]
 [ext_resource path="res://src/Actors/CustomCamera.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/Enemies/Enemy.tscn" type="PackedScene" id=7]
 
 [node name="IntroLevel" type="Node2D"]
 script = ExtResource( 5 )
+
+[node name="Enemy" parent="." instance=ExtResource( 7 )]
+position = Vector2( -231, 0 )
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
 

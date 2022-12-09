@@ -44,7 +44,6 @@ func _physics_process(delta):
 		
 
 func spring_jump():
-	print("I JUMP")
 	velocity.y -= lerp(velocity.y, velocity.y + SPRING_FORCE, LERP_WEIGHT)
 
 

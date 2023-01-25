@@ -1,5 +1,6 @@
 # Up is Down
-awesome great unbelievable super wonderful game 
+
+![demo](https://github.com/oleksadobush/Up_is_Down/blob/master/files/demo.gif)
 
 ## 1. Overview
 

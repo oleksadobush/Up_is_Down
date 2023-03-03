@@ -16,6 +16,8 @@ config/icon="res://art/Characters/GrayTile.png"
 
 [display]
 
+window/size/fullscreen=true
+window/size/always_on_top=true
 window/stretch/aspect="keep"
 
 [input]

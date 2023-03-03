@@ -10,6 +10,7 @@ extents = Vector2( 64, 64 )
 extents = Vector2( 29.7644, 42.7641 )
 
 [node name="Spring" type="StaticBody2D"]
+collision_mask = 12
 script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]

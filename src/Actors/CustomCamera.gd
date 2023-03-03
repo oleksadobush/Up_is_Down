@@ -4,10 +4,10 @@ extends Camera2D
 # bteween levels 384 white px
 # one lewel is 1152 px in height
 
-var DIFFERENCE = 576 # 512
-var SHIFT = 768 + 384 - 32 # 1152
-var X_OFFSET = 352
-var Y_OFFSET = 352
+var DIFFERENCE = 576
+var SHIFT = 1152
+var X_OFFSET = 384
+var Y_OFFSET = 384
 
 var LEVEL1_Y = 384
 var LEVEL2_Y = 384 + 1152
@@ -19,7 +19,7 @@ onready var player = get_parent().get_node("Player")
 
 func _ready():
 	next_position.x = player.get_position().x + X_OFFSET
-	next_position.y = player.get_position().y - Y_OFFSET
+	next_position.y = Y_OFFSET
 	set_position(next_position)
 
 

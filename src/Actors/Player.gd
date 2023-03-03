@@ -3,7 +3,7 @@ extends KinematicBody2D
 const SPEED: int = 600
 const SPEED_UP: int = 600
 const JUMP_FORCE: int = 775
-const SPRING_FORCE: int = 6000
+const SPRING_FORCE: int = 8000
 const NEAR_WALL_SPEED: int = 90
 const LERP_WEIGHT: float = 0.3
 

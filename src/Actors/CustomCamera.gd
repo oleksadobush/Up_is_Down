@@ -7,7 +7,7 @@ var Y_OFFSET = 250
 
 var next_position: Vector2 = Vector2()
 
-onready var player = get_parent().get_node("Player")
+@onready var player = get_parent().get_node("Player")
 
 func _ready():
 	next_position.x = player.get_position().x + X_OFFSET

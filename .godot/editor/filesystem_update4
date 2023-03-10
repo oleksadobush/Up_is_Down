@@ -1,0 +1,3 @@
+res://src/Main.tscn
+res://src/Enemies/Enemy.gd
+res://src/Levels/IntroLevel.tscn

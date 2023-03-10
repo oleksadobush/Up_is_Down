@@ -1,11 +1,10 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://art/Characters/EnemySprite.png" type="Texture" id=1]
+[ext_resource path="res://art/Characters/EnemySprite.png" type="Texture2D" id=1]
 [ext_resource path="res://src/Enemies/Enemy.gd" type="Script" id=2]
-[ext_resource path="res://art/Characters/GrayTile.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 25.5, 25.5 )
+size = Vector2( 25.5, 25.5 )
 
 [sub_resource type="AnimationNodeStateMachine" id=7]
 
@@ -20,8 +19,8 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 1, 1 ) ]
 }
@@ -32,8 +31,8 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ SubResource( 6 ) ]
 }
@@ -44,92 +43,56 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 0, 0.5 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("CollisionShape2D:shape:extents")
+tracks/3/path = NodePath("CollisionShape2D:shape:size")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 25.5, 25.5 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("Icon:texture")
+tracks/4/path = NodePath("Sprite2D:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
-"values": [ ExtResource( 3 ) ]
+"values": [ Vector2( 0, 0 ) ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Icon:position")
+tracks/5/path = NodePath("Sprite2D:scale")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
-"values": [ Vector2( 0, -0.5 ) ]
+"values": [ Vector2( 0.844, 0.844 ) ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("Icon:scale")
+tracks/6/path = NodePath("CollisionShape2D:scale")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0.84375, 0.828125 ) ]
-}
-tracks/7/type = "value"
-tracks/7/path = NodePath("Sprite:position")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, 0 ) ]
-}
-tracks/8/type = "value"
-tracks/8/path = NodePath("Sprite:scale")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0.844, 0.844 ) ]
-}
-tracks/9/type = "value"
-tracks/9/path = NodePath("CollisionShape2D:scale")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PackedFloat32Array( 0 ),
+"transitions": PackedFloat32Array( 1 ),
 "update": 0,
 "values": [ Vector2( 1, 1 ) ]
 }
@@ -138,38 +101,38 @@ tracks/9/keys = {
 resource_name = "finish_slide"
 length = 0.2
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:position")
+tracks/0/path = NodePath("Sprite2D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.2 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0, 10.504 ), Vector2( 0, 0 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Sprite:scale")
+tracks/1/path = NodePath("Sprite2D:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.2 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0.844, 0.51575 ), Vector2( 0.844, 0.844 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("CollisionShape2D:shape:extents")
+tracks/2/path = NodePath("CollisionShape2D:shape:size")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.2 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 25.5, 15.5 ), Vector2( 25.5, 26 ) ]
 }
@@ -180,8 +143,8 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.2 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0, 10.5 ), Vector2( 0, 0 ) ]
 }
@@ -190,38 +153,38 @@ tracks/3/keys = {
 resource_name = "start_slide"
 length = 0.2
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:position")
+tracks/0/path = NodePath("Sprite2D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.2 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0, 0 ), Vector2( 0, 10.504 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Sprite:scale")
+tracks/1/path = NodePath("Sprite2D:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.2 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0.844, 0.844 ), Vector2( 0.844, 0.51575 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("CollisionShape2D:shape:extents")
+tracks/2/path = NodePath("CollisionShape2D:shape:size")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.2 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 25.5, 26 ), Vector2( 25.5, 15.5 ) ]
 }
@@ -232,24 +195,26 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PackedFloat32Array( 0, 0.2 ),
+"transitions": PackedFloat32Array( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0, 0 ), Vector2( 0, 10.5 ) ]
 }
 
 [sub_resource type="RectangleShape2D" id=12]
-extents = Vector2( 29, 26.5 )
+size = Vector2( 29, 26.5 )
 
-[node name="Enemy" type="KinematicBody2D"]
+[node name="Enemy" type="CharacterBody2D"]
 collision_layer = 5
+collision_mask = 0
 script = ExtResource( 2 )
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2( 0.844, 0.844 )
 texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2( 0, 0.5 )
 shape = SubResource( 6 )
 
@@ -257,25 +222,25 @@ shape = SubResource( 6 )
 position = Vector2( -22, -26 )
 scale = Vector2( 1.3, 1.3 )
 enabled = true
-cast_to = Vector2( 138.462, -69.2308 )
+target_position = Vector2( 123.077, -62.3077 )
 collision_mask = 16
 
 [node name="WallRay" type="RayCast2D" parent="."]
 position = Vector2( 0, -26 )
 enabled = true
-cast_to = Vector2( 162, 1 )
+target_position = Vector2( 162, -1 )
 collision_mask = 16
 
 [node name="CeillingRay" type="RayCast2D" parent="."]
 position = Vector2( -28, 26 )
 enabled = true
-cast_to = Vector2( 0, -54 )
+target_position = Vector2( 0, -54 )
 collision_mask = 16
 
 [node name="UnderRay" type="RayCast2D" parent="."]
 position = Vector2( 0, 14 )
 enabled = true
-cast_to = Vector2( 166, 0 )
+target_position = Vector2( 166, 0 )
 collision_mask = 16
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
@@ -297,7 +262,5 @@ collision_mask = 8
 visible = false
 position = Vector2( 2, -0.5 )
 shape = SubResource( 12 )
-
-[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

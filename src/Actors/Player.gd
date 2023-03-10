@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends CharacterBody2D
 
 const SPEED: int = 600
 const SPEED_UP: int = 600
@@ -13,10 +13,10 @@ var _jumped: bool = false
 var _sliding: bool = false
 var _velocity: Vector2 = Vector2()
 
-onready var EdgeRayJump = get_node("EdgeRayJump")
-onready var WallRay = get_node("WallRay")
-onready var CeillingRay = get_node("CeillingRay")
-onready var AnimPlayer = get_node("AnimationPlayer")
+@onready var EdgeRayJump = get_node("EdgeRayJump")
+@onready var WallRay = get_node("WallRay")
+@onready var CeillingRay = get_node("CeillingRay")
+@onready var AnimPlayer = get_node("AnimationPlayer")
 
 
 func _physics_process(delta):
@@ -45,7 +45,10 @@ func _physics_process(delta):
 		_jumped = true
 
 	_velocity.y += gravity * delta
-	_velocity.y = move_and_slide(_velocity, Vector2.UP).y
+	set_velocity(_velocity)
+	set_up_direction(Vector2.UP)
+	move_and_slide()
+	_velocity.y = velocity.y
 
 
 func spring_jump():

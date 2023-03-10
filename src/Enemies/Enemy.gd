@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends CharacterBody2D
 
 const ENEMY_SPEED: int = 600
 const JUMP_FORCE: int = 800
@@ -7,13 +7,13 @@ const SPRING_FORCE: int = 6000
 
 var gravity: int = 2000
 
-onready var Player = get_node("../Player")
+@onready var Player = get_node("../Player")
 
-onready var EdgeRayJump = get_node("EdgeRayJump")
-onready var WallRay = get_node("WallRay")
-onready var CeillingRay = get_node("CeillingRay")
-onready var UnderRay = get_node("UnderRay")
-onready var AnimPlayer = get_node("AnimationPlayer")
+@onready var EdgeRayJump = get_node("EdgeRayJump")
+@onready var WallRay = get_node("WallRay")
+@onready var CeillingRay = get_node("CeillingRay")
+@onready var UnderRay = get_node("UnderRay")
+@onready var AnimPlayer = get_node("AnimationPlayer")
 
 var sliding: bool = false
 var jumped: bool = false
@@ -36,7 +36,9 @@ func _physics_process(delta):
 			velocity.y -= JUMP_FORCE
 			jumped = true
 			
-		velocity = move_and_slide(velocity + Vector2.DOWN * gravity * delta)
+		set_velocity(velocity + Vector2.DOWN * gravity * delta)
+		move_and_slide()
+		velocity = velocity
 		
 	elif sliding and not CeillingRay.is_colliding():
 		AnimPlayer.play("finish_slide")

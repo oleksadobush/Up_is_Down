@@ -4,11 +4,11 @@ var falling_speed = 10000
 
 
 func _ready():
-	$Sprite/AnimationPlayer.play("default")
+	$Sprite2D/AnimationPlayer.play("default")
 
 
 func _on_MovingTile_body_entered(body):
-	$Sprite/AnimationPlayer.play("falling")
+	$Sprite2D/AnimationPlayer.play("falling")
 	body.gravity += falling_speed
 
 

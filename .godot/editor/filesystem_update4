@@ -1,0 +1,4 @@
+res://src/Levels/DemoLevel.tscn
+res://src/Actors/CustomCamera.gd
+res://src/Actors/Player.tscn
+res://src/TileMap.tscn
